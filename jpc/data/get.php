@@ -9,7 +9,7 @@ if($_GET){
 	extract($_GET);
 	//Deactivate 
 	if($mode == "deactivate" ){
-		$result = $edit->deactivate($id);
+		$result = $edit->deactivate_intake($id);
 		if($result){
 			header('location:'.$redirect.'&msg=success');
 		}else{

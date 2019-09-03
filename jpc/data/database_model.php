@@ -26,54 +26,28 @@ class database_model{
 		global $wpdb;
 		
 		$db = $this->db_connect();
-		$sql1="CREATE TABLE IF NOT EXISTS `".$wpdb->prefix."intake_feedback` (
-				 `intake_feedback_id` int(11) NOT NULL AUTO_INCREMENT,
-				 `submitter_id` int(11) NOT NULL,
-				 `field_id` int(11) NOT NULL,
-				 `answer` varchar(250) NOT NULL,
-				 `date_answered` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-				 `is_viewed` int(11) NOT NULL DEFAULT '0',
-				 PRIMARY KEY (`FeedbackID`)
-				) ENGINE=InnoDB DEFAULT CHARSET=latin1";
-				
-		$sql2="CREATE TABLE IF NOT EXISTS `".$wpdb->prefix."fields`(
-			 `field_id` int(10) NOT NULL AUTO_INCREMENT,
-			 `field_name` varchar(250) NOT NULL,
-			 `status` int(1) NOT NULL DEFAULT '1',
-			 PRIMARY KEY (`QuestionID`)
-			) ENGINE=InnoDB DEFAULT CHARSET=latin1";
-			
-		$sql3="CREATE TABLE IF NOT EXISTS `".$wpdb->prefix."intake` (
-			 `intake_id` int(10) NOT NULL AUTO_INCREMENT,
-			 `submitter_id` int(10) NOT NULL,
-			 `status` int(1) NOT NULL DEFAULT '2',
-			 `date_submit` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-			 `is_viewed` int(11) NOT NULL DEFAULT '0',
-			 PRIMARY KEY (`ReviewID`)
-			) ENGINE=InnoDB DEFAULT CHARSET=latin1";
 
-		$sql4="CREATE TABLE IF NOT EXISTS `".$wpdb->prefix."submitter` (
-			 `submitter_id` int(11) NOT NULL AUTO_INCREMENT,
-			 `fname` varchar(50) NOT NULL,
-			 `lname` varchar(50) NOT NULL,
-			 `city` varchar(50) NOT NULL,
-			 `state` varchar(50) NOT NULL,
-			 PRIMARY KEY (`submitter_id`)
-			) ENGINE=InnoDB DEFAULT CHARSET=latin1";
-			
-		$sql5="INSERT INTO `".$wpdb->prefix."fields` (`field_id`, `field_name`, `status`) VALUES
-				(1, 'To', 1),
-				(2, 'From', 1),
-				(3, 'Message', 1);
-		";
+		/* 
+		intake_status
+			2 = Pending
+			1 = Approved
+			0 = Deleted
+		*/
+		$sql1="CREATE TABLE IF NOT EXISTS `".$wpdb->prefix."intake` (
+				 `intake_id` int(11) NOT NULL AUTO_INCREMENT,
+				 `name_to` varchar(100) NOT NULL AUTO_INCREMENT,
+				 `name_from` varchar(11) NOT NULL AUTO_INCREMENT,
+				 `intake_message` text NOT NULL AUTO_INCREMENT,
+				 `date_answered` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+				 `intake_status` int(11) NOT NULL DEFAULT '2',
+				 `is_viewed` int(11) NOT NULL DEFAULT '0',
+				 PRIMARY KEY (`intake_id`)
+				) ENGINE=InnoDB DEFAULT CHARSET=latin1";
+
 			
 		$rs1 = $db->query($sql1);
-		$rs2 = $db->query($sql2);
-		$rs3 = $db->query($sql3);
-		$rs4 = $db->query($sql4); 
-		$rs5 = $db->query($sql5);
 
-		if($rs1 && $rs2 && $rs3 && $rs4 && $rs5 && $rs6 ){
+		if($rs1 ){
 			return true;
 		}else{
 			return false;
