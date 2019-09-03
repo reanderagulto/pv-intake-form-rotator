@@ -1,0 +1,8 @@
+[18-Apr-2016 19:51:43 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/jcruzpv/public_html/wp-content/plugins/primeview-plugin/jpc/data/post.php on line 21
+[10-May-2016 13:47:35 America/Phoenix] PHP Parse error:  syntax error, unexpected '"' in /home/jcruzpv/public_html/wordpress/wp-content/plugins/primeview-plugin/jpc/data/post.php on line 34
+[10-May-2016 13:47:37 America/Phoenix] PHP Parse error:  syntax error, unexpected '"' in /home/jcruzpv/public_html/wordpress/wp-content/plugins/primeview-plugin/jpc/data/post.php on line 34
+[10-May-2016 21:03:48 UTC] PHP Fatal error:  Call to undefined method insert_model::insertFeedback() in /home/jcruzpv/public_html/wordpress/wp-content/plugins/primeview-plugin/jpc/data/post.php on line 36
+[11-May-2016 10:34:31 America/Phoenix] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/jcruzpv/public_html/wordpress/wp-content/plugins/primeview-plugin/jpc/data/database_model.php on line 19
+[11-May-2016 10:34:31 America/Phoenix] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/jcruzpv/public_html/wordpress/wp-content/plugins/primeview-plugin/jpc/data/database_model.php on line 19
+[11-May-2016 10:34:31 America/Phoenix] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/jcruzpv/public_html/wordpress/wp-content/plugins/primeview-plugin/jpc/data/edit_model.php on line 84
+[11-May-2016 10:34:31 America/Phoenix] PHP Warning:  mysqli_error(): Couldn't fetch mysqli in /home/jcruzpv/public_html/wordpress/wp-content/plugins/primeview-plugin/jpc/data/edit_model.php on line 89

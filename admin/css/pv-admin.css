@@ -1,0 +1,174 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+ div#DataTables_Table_0_wrapper {
+    width: 98%;
+    background: #fff;
+    box-sizing: border-box;
+    margin: 26px 17px 9px;
+    padding: 1px 12px;
+    padding: 22px;
+}
+table.dataTable.no-footer {
+    border-bottom: 1px solid #111;
+}
+div#DataTables_Table_0_length,div#DataTables_Table_2_length {
+    margin-bottom: 23px;
+}
+table.dataTable.no-footer {
+    border-bottom: 1px solid #ccc;
+    margin: 20px 0px;
+}
+table.dataTable thead th, table.dataTable thead td {
+    padding: 10px 18px;
+    border-bottom: 1px solid #E5E5E5;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+    border: 1px solid #0073AA;
+    background: #0073AA;
+    color: #fff!important;
+}
+h2.pv-h2 {
+    margin-left: 15px;
+    margin-top: 28px;
+}
+div#TB_ajaxContent div {
+    padding: 24px;
+}
+ul.tabs {
+    margin: auto;
+    padding: 0;
+    /* float: left; */
+    list-style: none;
+    height: 32px;
+    border-bottom: 1px solid #333;
+    width: 97%;
+}
+ul.tabs li a {
+    color: #f;
+    text-decoration: none;
+    color: #fff;
+}
+ul.tabs li.active a {
+    color: #000;
+}
+ul.tabs li {
+	float: left;
+	margin: 0;
+	cursor: pointer;
+	padding: 0px 21px;
+	height: 31px;
+	line-height: 31px;
+	border-top: 1px solid #333;
+	border-left: 1px solid #333;
+	border-bottom: 1px solid #333;
+	background-color: #666;
+	color: #ccc;
+	overflow: hidden;
+	position: relative;
+}
+
+.tab_last { border-right: 1px solid #333; }
+
+ul.tabs li:hover {
+	background-color: #ccc;
+	color: #333;
+}
+
+ul.tabs li.active {
+	background-color: #fff;
+	color: #333;
+	border-bottom: 1px solid #fff;
+	display: block;
+}
+
+.tab_container {
+    border: 1px solid #333;
+    border-top: none;
+    clear: both;
+    /* float: left; */
+    width: 100%;
+    background: #fff;
+    overflow: auto;
+    width: 97%;
+    margin: auto;
+}
+
+.tab_content {
+	padding: 20px;
+	display: none;
+}
+
+.tab_drawer_heading { display: none; }
+
+@media screen and (max-width: 480px) {
+	.tabs {
+		display: none;
+	}
+	.tab_drawer_heading {
+		background-color: #ccc;
+		color: #fff;
+		border-top: 1px solid #333;
+		margin: 0;
+		padding: 5px 20px;
+		display: block;
+		cursor: pointer;
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+	.d_active {
+		background-color: #666;
+		color: #fff;
+	}
+}
+table#DataTables_Table_0,table#DataTables_Table_1 {
+    width: 100%!important;
+}
+
+form#rating-view-form tr td input[type=text] {
+    width: 100%;
+}
+form#rating-view-form tr td select,form#rating-view-form tr td textarea {
+    width: 100%;
+}
+form#rating-view-form table tr td {
+    padding: 10px 0px;
+}
+form#rating-view-form table tr td label {
+    font-weight: bold;
+}
+form#rating-view-form table {
+    width: 100%;
+    margin-top: 20px;
+
+}
+div#trash-review-tab table {
+    width: 100%!important;
+}
+div#DataTables_Table_1_wrapper {
+    width: 98%;
+    background: #fff;
+    box-sizing: border-box;
+    margin: 26px 17px 9px;
+    padding: 1px 12px;
+    padding: 22px;
+}
+div#DataTables_Table_2_wrapper {
+    width: 98%;
+    background: #fff;
+    box-sizing: border-box;
+    margin: 26px 17px 9px;
+    padding: 1px 12px;
+    padding: 22px;
+}
+div#DataTables_Table_1_length {
+    margin-bottom: 23px;
+}
+span.restore a {
+    color: green;
+}

@@ -1,0 +1,265 @@
+.rating-main-form .pv-header {
+    background: #eee;
+}
+.pv-header ul li,.pv-header ul li a {
+    display: inline;
+    color: #fff!important;
+    font-size: 16px;
+    text-transform: uppercase;
+	text-decoration:none;
+}
+.pv-header ul {
+    margin: 0px!important;
+    background: #007eec;
+    padding: 11px 0px;
+}
+.pv-separator {
+    border-top: 2px solid #ebebeb;
+    border-bottom: 2px solid #ebebeb;
+    padding: 10px 0px;
+    background: -webkit-linear-gradient(#fdfdfd, #f2f2f2);
+	background: -moz-linear-gradient(#fdfdfd, #f2f2f2);
+	background: -0-linear-gradient(#fdfdfd, #f2f2f2);
+	background: linear-gradient(#fdfdfd, #f2f2f2);
+}
+.pv-separator h4 {
+    margin: 0px!important;
+    text-align: center;
+    color: #007EEC;
+    font-size: 18px!important;
+}
+div#pv-review {
+    background: #fff;
+    border-bottom: 2px solid #EBEBEB;
+}
+div#pv-review label.pv-label {
+    color: #007EEC;
+    font-weight: bold;
+    display: block;
+    margin: 20px 0px;
+}
+fieldset, label { margin: 0; padding: 0; }
+body{ /* margin: 20px; */ }
+h1 { font-size: 1.5em; margin: 10px; }
+
+/****** Style Star Rating Widget *****/
+
+.rating {
+  border: none;
+  float: left;
+}
+
+.rating > input { display: none; }
+.rating > label:before {
+  margin: 0 5px;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating > .half:before {
+  content: "\f089";
+  position: absolute;
+}
+
+.rating > label {
+  color: #7f7f7f;
+ float: right;
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.rating > input:checked ~ label, /* show gold star when clicked */
+.rating:not(:checked) > label:hover, /* hover current star */
+.rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+
+.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating > input:checked ~ label:hover ~ label { color: #FFED85;  }
+
+
+
+fieldset.rating {
+    display: block!important;
+    clear: both;
+    margin: 4px 0px;
+}
+div#pv-review input, div#pv-review textarea {
+    width: 75%;
+    margin: auto;
+}
+.pv-b{
+    border-right: 2px solid #F2F2F2;
+}
+.pv-b.unit.w-1-2 {
+    position: relative;
+}
+span.pv-or {
+    color: #007EEC;
+    font-weight: bold;
+    font-size: 35px;
+    padding: 18px 17px;
+    border: 2px solid #EBEBEB;
+    border-radius: 100px;
+    position: absolute;
+}
+span.pv-or {
+    color: #007EEC;
+    font-weight: bold;
+    font-size: 35px;
+    padding: 18px 24px;
+    border: 2px solid #EBEBEB;
+    border-radius: 100px;
+    position: absolute;
+    right: -53px;
+    top: 35%;
+    background: white;
+}
+div#pv-review .grid .unit {
+    padding: 20px 0px 40px 0px;
+}
+.pv-private-feedback label {
+    color: #007EEC;
+    font-weight: bold;
+    display: block;
+    margin: 10px 0px;
+}
+.pv-private-feedback {
+    padding: 15px;
+}
+div#pv-review label.pv-label sup {
+    color: red;
+}
+span.pv-optional {
+    color: #269e29;
+    font-style: italic;
+}
+button.pv_submit {
+    background: #007EEC;
+    color: #fff;
+    border: 0px;
+    padding: 10px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    margin: 25px auto 30px auto;
+    display: block;
+}
+.pv-body .wrap .unit:last-of-type h5 {
+    margin-left: 10px;
+    text-align: center;
+}
+.review-forms-third-party.unit.w-1-2 {
+    text-align: center;
+}
+.review-forms-third-party.unit.w-1-2 img {
+    border: 0px;
+    box-shadow: none;
+    display: block;
+    margin: 10px auto;
+}
+.pv-success {
+    border-left: 4px solid green;
+    padding: 10px;
+    background: #f9f9f9;
+    margin: 10px 0px;
+}
+.pv-success h4 {
+    margin: 0px;
+}
+.pv-review-image img {
+    box-shadow: none!important;
+    width: 75px!important;
+}
+span.pv-reviewer,span.pv-address,span.pv-date{
+	display:block;
+}
+.view-review {
+    padding: 25px;
+}
+.view-review .grid {
+    border-bottom: 1px solid #EBEBEB;
+	padding: 10px;
+}
+.view-review .grid:last-of-type {
+	border-bottom: 0px solid #EBEBEB;
+}
+.pv-star-rating i {
+    color: #FF9C3E;
+    font-size: 20px;
+    margin-right: 7px;
+}
+.pv-review-summary {
+    font-weight: bold;
+    font-size: 16px;
+}
+a.pv-read-more {
+    text-decoration: none;
+    display: block;
+    color: #EE811A!important;
+}
+#pv-review form .second-part .unit select {
+    width: 100%;
+    background: #E6E6E6;
+    border: 1px solid #7F7F7F;
+}
+/* ---------- */
+
+.rating-main-form .pv-body .pv-title { background-color: #ff780b; padding: 15px 20px; }
+.rating-main-form .pv-body .pv-title h4 { color: #ffffff; font-size: 24px; font-weight: normal; text-align: center; line-height: 0.8; margin: 0; }
+
+.rating-main-form .pv-body .pv-sub-title { background-color: #bebebe; padding: 15px 20px; }
+.rating-main-form .pv-body .pv-sub-title h4 { color: #000000; font-size: 24px; font-weight: normal; text-align: center; line-height: 0.8; margin: 0; }
+.rating-main-form .pv-body .pv-sub-title h4 span { color: #ff780b; font-style: italic; }
+
+#pv-review form .first-part { background-color: #e6e6e6; margin: 0 0 47px !important; padding: 35px 33px 43px; }
+#pv-review form .first-part .review-forms-third-party { border-bottom: 1px solid #7f7f7f; margin-bottom: 30px; padding: 0 0 30px !important; }
+#pv-review form .first-part .review-forms-third-party .social-reviews .unit { text-align: center; padding: 0 10px; }
+#pv-review form .first-part .review-forms-third-party .social-reviews .unit .social-logo { margin-bottom: 20px; }
+
+#pv-review form .first-part .pv-b { border: none; padding: 0 !important; }
+#pv-review form .first-part .pv-b h5 { font-size: 18px; line-height: 0.8;  margin: 0 0 35px; }
+
+#pv-review form .first-part .pv-b .review-form { margin: 0 0 45px; }
+#pv-review form .first-part .pv-b .review-form .unit { text-align: center; padding: 0 10px; }
+#pv-review form .first-part .pv-b .review-form .unit .pv-label { color: #000000; line-height: normal; margin: 0 0 10px; }
+#pv-review form .first-part .pv-b .review-form .unit .rating { float: none; max-width: 133px; width: 100%; margin: 0 auto; }
+
+#pv-review form .first-part .pv-b .review-summary-container { margin-bottom: 33px; }
+
+#pv-review form .first-part .pv-b .review-summary-container .pv-label,
+#pv-review form .first-part .pv-b .review-container .pv-label { color: #000000; font-size: 18px; line-height: normal; margin: 0 0 7px; }
+
+#pv-review form .first-part .pv-b .review-summary-container input,
+#pv-review form .first-part .pv-b .review-container textarea { max-width: 660px; width: 100%; background: #e6e6e6; border: 1px solid #7f7f7f; }
+
+#pv-review form .second-part { background-color: #e6e6e6; margin: 0 !important; padding: 35px 33px 43px; }
+#pv-review form .second-part .unit { padding: 0 10px; }
+#pv-review form .second-part .unit input { max-width: 305px; width: 100%; background: #e6e6e6; border: 1px solid #7f7f7f; }
+#pv-review form .second-part .unit select { width: 100%; background-color: #e6e6e6; border-color: #7f7f7f; }
+
+#pv-review form .second-part .unit .pv-label { color: #000; font-size: 18px; line-height: normal; margin: 0 0 7px; }
+
+#pv-review form .second-part .field-1,
+#pv-review form .second-part .field-2 { margin-bottom: 55px; }
+
+#pv-review form .pv-private-feedback { background-color: #e6e6e6; margin: 0 !important; padding: 35px 33px 43px; }
+#pv-review form .pv-private-feedback label { color: #000; font-size: 18px; line-height: normal; margin: 0 0 7px; }
+#pv-review form .pv-private-feedback input { max-width: 660px; width: 100%; background: #e6e6e6; border: 1px solid #7f7f7f; margin-bottom: 23px; }
+
+#pv-review form .pv-private-feedback .pv_submit { background: #ff780b; font-size: 22px; line-height: normal; margin: 27px auto 0; padding: 15px; }
+#pv-review form .pv-private-feedback .pv_submit:hover { background: #ff780b; background: -moz-linear-gradient(top,  #ff780b 0%, #da670a 100%); background: -webkit-linear-gradient(top,  #ff780b 0%,#da670a 100%); background: linear-gradient(to bottom,  #ff780b 0%,#da670a 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff780b', endColorstr='#da670a',GradientType=0 ); color: #ffffff; }
+
+/* ---------- */
+
+#pv-review .view-review { background-color: #e6e6e6; }
+#pv-review .view-review .review-container ul li { border-bottom: 1px solid #7f7f7f; }
+#pv-review .view-review .review-container ul li .wrap { margin: 0; padding: 20px 0; }
+#pv-review .view-review .review-container ul li .wrap .unit { padding: 0 10px }
+#pv-review .view-review .review-container ul li .wrap .unit .pv-review-image { margin-bottom: 10px; }
+#pv-review .view-review .review-container ul li .wrap .unit .pv-review-summary { text-transform: capitalize; }
+
+#pv-review .view-review .review-container ul li:last-child { border: none; }
