@@ -80,7 +80,7 @@ function pvintake_main_page(){
 	// $isViewed =  $edit->isViewed();
  ?>
 	
-	<h2 class="pv-h2">Primeview Ratings</h2>
+	<h2 class="pv-h2">Primeview Intake Form Rotator</h2>
 	<table style="margin-left: 22px;margin-bottom: 17px;font-weight: bold;">
 		<tbody>
 		<tr>
