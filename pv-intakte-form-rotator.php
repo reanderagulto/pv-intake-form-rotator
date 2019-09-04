@@ -73,7 +73,7 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-pv-intakte-form-rotator.ph
  */
 function run_pv_intakte_form_rotator() {
 
-	require_once plugin_dir_path( __FILE__ ) . 'admin/class-primeview-plugin-admin.php';  		//Require Admin class
+	require_once plugin_dir_path( __FILE__ ) . 'admin/class-pv-intakte-form-rotator-admin.php'; //Require Admin class
 	require_once plugin_dir_path( __FILE__ ) . 'jpc/create-page.php'; 							//Create Admin Pages
 	 
 	$assets = new Pv_Intakte_Form_Rotator_Admin(); 												//Init Class

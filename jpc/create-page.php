@@ -41,12 +41,12 @@ function create_main_page(){
 	);
  
 	add_submenu_page( 
-		'primeview-rating',      			 		 // Parent Page ID
-		'PV Intake Settings',     		 				 // Page Title
-		'Settings', 						 // Navbar Title
-		'manage_options', 						 // Permission 	
-		'pv-settings', 							 // Submenu Page ID
-		'pv_rating_settings' 								 // Function  call	 
+		'primeview-rating',      			 	// Parent Page ID
+		'PV Intake Settings',     		 		// Page Title
+		'Settings', 						 	// Navbar Title
+		'manage_options', 						// Permission 	
+		'pv-settings', 							// Submenu Page ID
+		'pv_rating_settings' 					// Function  call	 
 	); 	
 }
 function getNotif($mode){
@@ -67,10 +67,10 @@ function getNotif($mode){
 //Page Proper
 function main_page(){
 	require_once('data/display_model.php');
-	require_once('data/edit_model.php');
+	// require_once('data/edit_model.php');
 	
 	$get  = new display_model();
-	$edit = new edit_model();
+	// $edit = new edit_model();
 	
 	$table = $get->show_all_intake_by_status(1)->fetch_assoc();
 	$pending = $get->show_all_intake_by_status(2)->fetch_assoc();
@@ -95,10 +95,9 @@ function main_page(){
 	</table>
 
 	<ul class="tabs">
-	 <li class="active" rel="pending-review-tab"><a href="#pending-review-tab">Pending Reviews</a></li>
-	  <li  rel="review-tab"><a href="#review-tab">Active Reviews</a></li>
-	  <li rel="trash-review-tab"><a href="#trash-review-tab">Trash</a></li>
-	 
+		<li class="active" rel="pending-review-tab"><a href="#pending-review-tab">Pending Reviews</a></li>
+		<li  rel="review-tab"><a href="#review-tab">Active Reviews</a></li>
+		<li rel="trash-review-tab"><a href="#trash-review-tab">Trash</a></li>
 	</ul>
 		<div class="tab_container">
 			<div id="pending-review-tab" class="tab_content">
