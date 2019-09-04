@@ -21,7 +21,7 @@ class database_model{
 			 die("Connection failed: " . $conn->connect_error);
 		}
 	}
-	public function create_tables(){
+	public function create_intake_table(){
 	
 		global $wpdb;
 		
@@ -40,14 +40,14 @@ class database_model{
 				 `intake_message` text NOT NULL AUTO_INCREMENT,
 				 `date_answered` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
 				 `intake_status` int(11) NOT NULL DEFAULT '2',
-				 `is_viewed` int(11) NOT NULL DEFAULT '0',
+				 `is_viewed` int(11) NOT NULL DEFAULT '0'
 				 PRIMARY KEY (`intake_id`)
 				) ENGINE=InnoDB DEFAULT CHARSET=latin1";
 
 			
 		$rs1 = $db->query($sql1);
 
-		if($rs1 ){
+		if($rs1){
 			return true;
 		}else{
 			return false;

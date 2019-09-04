@@ -36,12 +36,12 @@ if ( ! defined( 'WPINC' ) ) {
  */
 function activate_pv_intakte_form_rotator() {
 	require_once plugin_dir_path( __FILE__ ) . 'jpc/data/database_model.php';
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-primeview-plugin-activator.php';
+	require_once plugin_dir_path( __FILE__ ) . 'includes/class-pv-intakte-form-rotator-activator.php';
 	
-	Primeview_Plugin_Activator::activate();
+	Pv_Intakte_Form_Rotator_Activator::activate();
 	
 	$db = new database_model();
-	$db->create_tables();		
+	$db->create_intake_table();		
 }
 
 /**

@@ -18,21 +18,13 @@ if($_GET){
 	}
 	//Activate
 	if($mode == "activate" ){
-		$result = $edit->activate($id);
+		$result = $edit->approve_intake($id);
 		if($result){
 			header('location:'.$redirect.'&msg=success');
 		}else{
 			die("Error : MYSQL Query Database Error (get.php)");
 		}
 	}	
-	if($mode == "delete_feedback" ){
-		$delete = $edit->deleteFeedbackViaID($id);
-		if($delete){
-			header('location:'.$redirect.'&msg=success');
-		}else{
-			die("Error : MYSQL Query Database Error (get.php)");
-		}
-	}
 }else{
 	die("Error 403 : Forbidden");
 }
