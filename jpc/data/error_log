@@ -6,3 +6,20 @@
 [11-May-2016 10:34:31 America/Phoenix] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/jcruzpv/public_html/wordpress/wp-content/plugins/primeview-plugin/jpc/data/database_model.php on line 19
 [11-May-2016 10:34:31 America/Phoenix] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/jcruzpv/public_html/wordpress/wp-content/plugins/primeview-plugin/jpc/data/edit_model.php on line 84
 [11-May-2016 10:34:31 America/Phoenix] PHP Warning:  mysqli_error(): Couldn't fetch mysqli in /home/jcruzpv/public_html/wordpress/wp-content/plugins/primeview-plugin/jpc/data/edit_model.php on line 89
+[04-Sep-2019 18:29:21 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/jelopone/public_html/wp-content/plugins/pv-intake-form-rotator/jpc/data/post.php on line 20
+[04-Sep-2019 18:35:46 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/jelopone/public_html/wp-content/plugins/zone-ratings/includes/class-zone-ratings-loader.php on line 127
+[04-Sep-2019 18:36:27 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/jelopone/public_html/wp-content/plugins/zone-ratings/includes/class-zone-ratings-loader.php on line 127
+[04-Sep-2019 18:50:43 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/jelopone/public_html/wp-content/plugins/zone-ratings/includes/class-zone-ratings-loader.php on line 127
+[04-Sep-2019 18:55:43 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/jelopone/public_html/wp-content/plugins/zone-ratings/includes/class-zone-ratings-loader.php on line 127
+[04-Sep-2019 19:01:56 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/jelopone/public_html/wp-content/plugins/zone-ratings/includes/class-zone-ratings-loader.php on line 127
+[04-Sep-2019 21:06:33 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/jelopone/public_html/wp-content/plugins/zone-ratings/includes/class-zone-ratings-loader.php on line 127
+[04-Sep-2019 21:07:12 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/jelopone/public_html/wp-content/plugins/zone-ratings/includes/class-zone-ratings-loader.php on line 127
+[04-Sep-2019 21:08:38 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/jelopone/public_html/wp-content/plugins/zone-ratings/includes/class-zone-ratings-loader.php on line 127
+[04-Sep-2019 21:52:34 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/jelopone/public_html/wp-content/plugins/zone-ratings/includes/class-zone-ratings-loader.php on line 127
+[04-Sep-2019 21:52:44 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/jelopone/public_html/wp-content/plugins/zone-ratings/includes/class-zone-ratings-loader.php on line 127
+[04-Sep-2019 21:54:41 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/jelopone/public_html/wp-content/plugins/zone-ratings/includes/class-zone-ratings-loader.php on line 127
+[04-Sep-2019 21:55:02 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/jelopone/public_html/wp-content/plugins/zone-ratings/includes/class-zone-ratings-loader.php on line 127
+[04-Sep-2019 22:02:34 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/jelopone/public_html/wp-content/plugins/zone-ratings/includes/class-zone-ratings-loader.php on line 127
+[04-Sep-2019 22:03:00 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/jelopone/public_html/wp-content/plugins/zone-ratings/includes/class-zone-ratings-loader.php on line 127
+[04-Sep-2019 22:07:40 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/jelopone/public_html/wp-content/plugins/zone-ratings/includes/class-zone-ratings-loader.php on line 127
+[04-Sep-2019 22:17:00 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/jelopone/public_html/wp-content/plugins/zone-ratings/includes/class-zone-ratings-loader.php on line 127

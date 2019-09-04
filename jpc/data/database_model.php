@@ -26,31 +26,29 @@ class database_model{
 		global $wpdb;
 		
 		$db = $this->db_connect();
-
+		$intake = $wpdb->prefix . "intake";
 		/* 
 		intake_status
 			2 = Pending
 			1 = Approved
 			0 = Deleted
 		*/
-		$sql1="CREATE TABLE IF NOT EXISTS `".$wpdb->prefix."intake` (
+		$sql1 = "CREATE TABLE IF NOT EXISTS $intake (
 				 `intake_id` int(11) NOT NULL AUTO_INCREMENT,
-				 `name_to` varchar(100) NOT NULL AUTO_INCREMENT,
-				 `name_from` varchar(11) NOT NULL AUTO_INCREMENT,
-				 `intake_message` text NOT NULL AUTO_INCREMENT,
+				 `name_to` varchar(100) NOT NULL,
+				 `name_from` varchar(100) NOT NULL,
+				 `intake_message` text NOT NULL,
 				 `date_answered` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
 				 `intake_status` int(11) NOT NULL DEFAULT '2',
-				 `is_viewed` int(11) NOT NULL DEFAULT '0'
-				 PRIMARY KEY (`intake_id`)
+				 `is_viewed` int(11) NOT NULL DEFAULT '0',
+				 PRIMARY KEY  (`intake_id`)
 				) ENGINE=InnoDB DEFAULT CHARSET=latin1";
-
-			
 		$rs1 = $db->query($sql1);
 
 		if($rs1){
 			return true;
 		}else{
-			return false;
+			die("MYSQL Error : ".mysqli_error($db));
 		}
 
 	}
