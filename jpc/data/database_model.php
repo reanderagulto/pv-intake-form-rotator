@@ -36,7 +36,7 @@ class database_model{
 		$sql1 = "CREATE TABLE IF NOT EXISTS $intake (
 				 `intake_id` int(11) NOT NULL AUTO_INCREMENT,
 				 `name_to` varchar(100) NOT NULL,
-				 `name_from` varchar(11) NOT NULL,
+				 `name_from` varchar(100) NOT NULL,
 				 `intake_message` text NOT NULL,
 				 `date_answered` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
 				 `intake_status` int(11) NOT NULL DEFAULT '2',

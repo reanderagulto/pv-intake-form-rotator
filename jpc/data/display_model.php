@@ -15,6 +15,12 @@ class display_model extends database_model{
 		$this->intake  = "`".$wpdb->prefix."intake`";
 	}
 
+	/* 
+	intake_status
+		2 = Pending
+		1 = Approved
+		0 = Deleted
+	*/
 	public function show_all_intake_by_status($status){
 		$db = $this->db_connect();
 		$sql="SELECT 
@@ -26,7 +32,7 @@ class display_model extends database_model{
 		if($result){
 			return $result;
 		}else{
-			die("MYSQL Error : ".mysqli_error($db));
+			return mysqli_error($db);
 		}		
 	}
 

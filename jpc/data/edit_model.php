@@ -45,7 +45,7 @@ class edit_model extends database_model{
 		$db = $this->db_connect();
 		
 		$sql="  UPDATE ".$this->intake." 
-				SET Status = '1'
+				SET intake_status = '1'
 				WHERE intake_id = '".$id."' 
 			";
 		$result = $db->query($sql);

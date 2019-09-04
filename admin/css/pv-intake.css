@@ -263,3 +263,16 @@ a.pv-read-more {
 #pv-review .view-review .review-container ul li .wrap .unit .pv-review-summary { text-transform: capitalize; }
 
 #pv-review .view-review .review-container ul li:last-child { border: none; }
+
+.intake-slider-item{
+    margin:10px;
+    padding:10px;
+    background-color: #007EEC;
+    color: white;
+    
+}
+
+.owl-item{
+    width: 235px !important;
+}
+
