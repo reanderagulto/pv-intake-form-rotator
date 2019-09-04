@@ -4,27 +4,27 @@
 **/
 
 // Hook for adding admin menus
-	add_action('admin_menu', 'create_main_page');
+	add_action('admin_menu', 'create_intake_page');
 // action function for above hook
  
 /**
 * Adds a new top-level page to the administration menu.
 **/
-function get($strings){
+function get_function($strings){
 	return plugins_url('/data/get.php'.$strings.'',__FILE__ );
 }
-function primeview_review_form(){
+function pv_intake_form(){
 	return require_once('templates/main-form.php');
 }
-add_shortcode( 'primeview-review-form' , 'primeview_review_form' );
+add_shortcode( 'pv-intake-form' , 'pv_intake_form' );
 
-function view_primeview_review(){
+function view_intake_form(){
 	return require_once('templates/view-review.php');
 }
-add_shortcode( 'view-primeview-review' , 'view_primeview_review' );
+add_shortcode( 'view-intake-form' , 'view_intake_form' );
 
 
-function create_main_page(){
+function create_intake_page(){
 	
 
 	// $ratings = '<span class="update-plugins count-'.getNotif('ratings').'"><span class="plugin-count">'.getNotif('ratings').'</span></span>';
@@ -35,21 +35,21 @@ function create_main_page(){
 		'PV Intake Form Rotator'.$ratings.'',	// Navbar Title
 		'manage_options',      					// Permission 
 		'pv-intake-form',      					// Page ID
-		'main_page',           			 	  	// Function call
+		'pvintake_main_page',           		// Function call
 		'dashicons-star-filled',   				// Favicon
 		2                				 	    // Order
 	);
  
 	add_submenu_page( 
-		'primeview-rating',      			 		 // Parent Page ID
-		'PV Intake Settings',     		 				 // Page Title
-		'Settings', 						 // Navbar Title
-		'manage_options', 						 // Permission 	
-		'pv-settings', 							 // Submenu Page ID
-		'pv_rating_settings' 								 // Function  call	 
+		'primeview-rating',      			 	// Parent Page ID
+		'PV Intake Settings',     		 		// Page Title
+		'Settings', 						 	// Navbar Title
+		'manage_options', 						// Permission 	
+		'pvintake-settings', 					// Submenu Page ID
+		'pv_intake_settings' 					// Function  call	 
 	); 	
 }
-function getNotif($mode){
+function get_notif($mode){
 	require_once('data/display_model.php');
 	$get = new display_model();
 	
@@ -65,12 +65,12 @@ function getNotif($mode){
 	return $count;
 }
 //Page Proper
-function main_page(){
+function pvintake_main_page(){
 	require_once('data/display_model.php');
-	require_once('data/edit_model.php');
+	// require_once('data/edit_model.php');
 	
 	$get  = new display_model();
-	$edit = new edit_model();
+	// $edit = new edit_model();
 	
 	$table = $get->show_all_intake_by_status(1)->fetch_assoc();
 	$pending = $get->show_all_intake_by_status(2)->fetch_assoc();
@@ -85,20 +85,19 @@ function main_page(){
 		<tbody>
 		<tr>
 			<td>Form Shortcode : </td>
-			<td>[primeview-review-form]</td>
+			<td>[pv-intake-form]</td>
 		</tr>
 		<tr>
 			<td>View Reviews Shortcode : </td>
-			<td>[view-primeview-review]</td>
+			<td>[view-intake-form]</td>
 		</tr>
 		</tbody>
 	</table>
 
 	<ul class="tabs">
-	 <li class="active" rel="pending-review-tab"><a href="#pending-review-tab">Pending Reviews</a></li>
-	  <li  rel="review-tab"><a href="#review-tab">Active Reviews</a></li>
-	  <li rel="trash-review-tab"><a href="#trash-review-tab">Trash</a></li>
-	 
+		<li class="active" rel="pending-review-tab"><a href="#pending-review-tab">Pending Reviews</a></li>
+		<li  rel="review-tab"><a href="#review-tab">Active Reviews</a></li>
+		<li rel="trash-review-tab"><a href="#trash-review-tab">Trash</a></li>
 	</ul>
 		<div class="tab_container">
 			<div id="pending-review-tab" class="tab_content">
@@ -110,7 +109,7 @@ function main_page(){
 		</div>
 <?php
 } 
-function pv_rating_settings(){
+function pv_intake_settings(){
  ?>
 	<h2 class="pv-h2">PV Ratings Settings</h2>
 	<form method="post" action="options.php">
@@ -162,7 +161,7 @@ function pv_rating_settings(){
 	</form>
 	<?php
 }
-function pv_save_settings_post() {
+function pv_intake_save_settings_post() {
 	register_setting( 'pv-option-group', 'google_review_chandler' );
 	register_setting( 'pv-option-group', 'yelp_review_chandler' );
 	register_setting( 'pv-option-group', 'angies_review_chandler' );
@@ -173,5 +172,5 @@ function pv_save_settings_post() {
 	register_setting( 'pv-option-group', 'angies_review_scottsdale' );
 	register_setting( 'pv-option-group', 'facebook_review_scottsdale' );
 }
-add_action( 'admin_init', 'pv_save_settings_post' ); 
+add_action( 'admin_init', 'pv_intake_save_settings_post' ); 
 ?>
