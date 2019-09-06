@@ -8,5 +8,9 @@ $j(document).ready(function(){
         items:3,
         loop:true,
         margin:10,
+        nav:true,
+        autoplayTimeout:300,
+        autoplayHoverPause:false,
+        autoplay:false
     });
 });

@@ -80,11 +80,14 @@ function run_pv_intakte_form_rotator() {
 	
 	if(is_admin()){
 		$assets->pv_register_css();																//Load CSS
-		$assets->pv_register_js();																//Load JS																
+		$assets->pv_register_js();																//Load JS											
 	}else{
 		$assets->pv_register_front_css();	
 		$assets->pv_register_front_js();	
+		$assets->outputFrontend();
 	}
 
 }
+
+
 run_pv_intakte_form_rotator();

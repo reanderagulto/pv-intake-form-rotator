@@ -1,5 +1,5 @@
 <?php
-require_once(plugin_dir_path( __FILE__ ).'../data/display_model.php'); 
+require_once(plugin_dir_path( __FILE__ ).'../data/display_model.php');
 $array = array();
 $get = new display_model();
 $intakes = $get->show_all_intake_by_status(1);
